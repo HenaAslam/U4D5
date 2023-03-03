@@ -1,4 +1,6 @@
 import Express from "express";
+import { join } from "path";
+
 import productsRouter from "./api/products/index.js";
 import {
   badRequestHandler,
@@ -9,9 +11,11 @@ import {
 
 const server = Express();
 const port = 3002;
-
-server.use("/products", productsRouter);
+const publicFolderPath = join(process.cwd(), "./public");
+server.use(Express.static(publicFolderPath));
 server.use(Express.json());
+server.use("/products", productsRouter);
+
 server.use(badRequestHandler);
 server.use(unauthorizedHandler);
 server.use(notFoundHandler);

@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "name": "3310",
+    "description": "somthing longer",
+    "brand": "nokia",
+    "imageUrl": "http://localhost:3000/img/products/1q1y2dslesiqdvc.jpg",
+    "price": 100,
+    "category": "smartphones",
+    "_id": "1q1y2dslesiqdvc",
+    "createdAt": "2023-03-03T12:35:15.767Z",
+    "updatedAt": "2023-03-03T12:35:15.767Z"
+  },
+  {
+    "name": "3310",
+    "description": "somthing longer",
+    "brand": "nokia",
+    "imageUrl": "http://localhost:3000/img/products/1q1y47olesp1wos.jpg",
+    "price": 100,
+    "category": "horror",
+    "_id": "1q1y47olesp1wos",
+    "createdAt": "2023-03-03T15:32:11.067Z",
+    "updatedAt": "2023-03-03T15:32:11.067Z"
+  }
+]

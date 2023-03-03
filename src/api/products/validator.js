@@ -20,6 +20,7 @@ const productSchema = {
       errorMessage: "brand is a mandatory field and needs to be a string",
     },
   },
+
   imageUrl: {
     in: ["body"],
     isString: {
@@ -40,7 +41,23 @@ const productSchema = {
   },
 };
 
+const reviewSchema = {
+  comment: {
+    in: ["body"],
+    isString: {
+      errorMessage: "comment is a mandatory field and needs to be a string",
+    },
+  },
+
+  rate: {
+    in: ["body"],
+    isDecimal: {
+      errorMessage: "rate  is a mandatory field and needs to be a number",
+    },
+  },
+};
 export const checkProductSchema = checkSchema(productSchema);
+export const checkReviewSchema = checkSchema(reviewSchema);
 
 export const triggerBadRequest = (req, res, next) => {
   const errors = validationResult(req);
